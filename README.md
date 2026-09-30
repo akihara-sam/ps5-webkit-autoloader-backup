@@ -5,6 +5,12 @@
 &nbsp;
 <p align="center">Automatically loads the WebKit exploit and your elf payloads.<br>Supports firmwares <b>1.00&ndash;5.50</b> and <b>7.00&ndash;13.60</b>.</p>
 
+> 🎯 **Tutorial focus: PS5 firmware 13.60 and below, not jailbroken**
+> If your PS5 is on firmware **13.60 or lower** and you haven't jailbroken it yet, this guide is for you. Skip directly to the **[Not jailbroken yet](#-not-jailbroken-yet)** section below.
+> *(The tool also supports legacy firmwares 1.00–5.50; see the original repo for that flow.)*
+
+
+
 <p align="center">
   <a href=".github/screenshots/webkit_autoloader.jpeg"><img src=".github/screenshots/webkit_autoloader.jpeg" width="260" alt="WebKit Autoloader - exploit running" /></a>
   <a href=".github/screenshots/webkit_autoloader_installer.jpeg"><img src=".github/screenshots/webkit_autoloader_installer.jpeg" width="260" alt="Installer" /></a>
@@ -31,21 +37,23 @@ This autoloader does it differently:
 
 There are two ways to set up the autoloader, depending on whether you're already jailbroken.
 
+### 🆕 Not jailbroken yet *(PS5 13.60 and below — recommended)*
+
+This is the path you want if you're starting from scratch on a PS5 running firmware 13.60 or below.
+
+You'll need a PC or Mac on the same network to host the exploit locally for the one-time setup:
+
+1. Download `webkit-autoloader-host.py` (or the `.exe`) from the [Releases](https://github.com/itsPLK/ps5-webkit-autoloader/releases) and run it on a PC on your network.
+2. On your PS5, set your network's DNS server to your PC's IP address.
+3. Open the **User's Guide** from Settings to run the installer, which adds the **WebKit Autoloader** app to your homescreen.
+4. Launch **WebKit Autoloader** from the homescreen.
+
 ### Already jailbroken? Just load the installer ELF
 
 1. Download `webkit-autoloader-installer_vX.Y.Z.elf` from the [Releases](https://github.com/itsPLK/ps5-webkit-autoloader/releases) page.
 2. Send it to your PS5 with `elfldr`, or launch it from Payload Manager.
 3. The installer opens the browser once to cache the autoloader page, then creates the **WebKit Autoloader** app on the homescreen and exits.
 4. **Reboot once**, then launch **WebKit Autoloader** from the homescreen.
-
-### Not jailbroken yet
-
-If you aren't jailbroken yet, you'll need to host the exploit locally on your PC for the initial setup:
-
-1. Download `webkit-autoloader-host.py` (or the `.exe`) from the [Releases](https://github.com/itsPLK/ps5-webkit-autoloader/releases) and run it on a PC on your network.
-2. On your PS5, set your network's DNS server to your PC's IP address.
-3. Open the **User's Guide** from Settings to run the installer, which adds the **WebKit Autoloader** app to your homescreen.
-4. Launch **WebKit Autoloader** from the homescreen.
 
 ## How to Use
 
